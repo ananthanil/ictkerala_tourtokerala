@@ -2,30 +2,12 @@
     margin: 0%;
     padding: 0%;
 }
-.bar{
-    background-color: #c4b8a8;
-}
-.front{
-    position: absolute;
-}
-.login{
-    position:absolute;
-    height: auto;
-}
-.log{
-    position:relative;
-    float: right;
-    margin-top: 3%;
-    margin-right: 7%;
-}
 .dcarousel{
-    margin-left: 20%;
+    margin-left: 5%;
 }
 footer{
     background-color: black;
     color: white;
-    margin-top: 2%;
-}
-.foot-p{
     text-align: center;
+    height: auto;
 }
