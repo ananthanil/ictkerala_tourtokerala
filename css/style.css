@@ -5,6 +5,12 @@
 .dcarousel{
     margin-left: 5%;
 }
+
+.but{
+   position: relative;
+   float: left;
+   margin-top: 3%;
+}
 footer{
     background-color: black;
     color: white;
