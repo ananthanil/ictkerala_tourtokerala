@@ -13,7 +13,11 @@
 }
 footer{
     background-color: black;
+    height: auto;
+    padding-top: 2%;
+    padding-bottom: 1%;
+}
+.footcon{
     color: white;
     text-align: center;
-    height: auto;
 }
