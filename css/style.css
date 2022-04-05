@@ -2,22 +2,22 @@
     margin: 0%;
     padding: 0%;
 }
-.dcarousel{
-    margin-left: 5%;
-}
-
 .but{
    position: relative;
    float: left;
    margin-top: 3%;
 }
 footer{
-    background-color: #423d3c;
+    background-color: #494d4b;
+    text-align: center;
     height: auto;
-    padding-top: 2%;
+    padding-top: 1%;
     padding-bottom: 1%;
 }
 .footcon{
     color: white;
-    text-align: center;
+    margin-top: 1%;
+}
+.footp{
+    color: #abb3b0;
 }
