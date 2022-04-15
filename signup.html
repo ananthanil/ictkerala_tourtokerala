@@ -12,122 +12,118 @@
     <title>Kerala Tourism | Sign up</title>
 </head>
 <body>
-        <!-- nav bar -->
+  <!-- nav bar -->
 
-        <nav class="navbar navbar-expand-lg navbar-light bg-danger">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#">
-                <img src="./images/logo.png" alt="" width="90" height="50">
-              </a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link " aria-current="page" href="./index.html">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="./districts.html">Destination</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link " href="./login.html">log in</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" href="./signup.html">Sign up</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
+  <nav class="navbar navbar-expand-lg navbar-light bg-danger">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="./images/logo.png" alt="" width="90" height="50">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link " aria-current="page" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./districts.html">Destination</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="./login.html">log in</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="./signup.html">Sign up</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+  </nav>
     
-        <!--end of nav bar -->
+  <!--end of nav bar -->
 
-        <!-- welcome title  -->
+  <!-- welcome title  -->
 
-          <div class="container">
-            <a class="btn btn-primary mt-4 but" href="./index.html" role="button">Back</a>
-            <div class="row">
-              <div class="col-12 text-center mt-3">
-                <h1 class="font-weight-dark text-dark ml-5 mr-5">Sign Up</h1>
-                <div class="text-info">Create an Account</div>
-              </div>
-            </div>
-          </div>
+  <div class="container">
+    <a class="btn btn-primary mt-4 but" href="./index.html" role="button">Back</a>
+    <div class="row">
+      <div class="col-12 text-center mt-3">
+        <h1 class="font-weight-dark text-dark ml-5 mr-5">Sign Up</h1>
+        <div class="text-info">Create an Account</div>
+      </div>
+    </div>
+  </div>
 
-      <!--end of welcome title -->
+  <!--end of welcome title -->
 
-        <!-- signup -->
-            <div class="container pt-5 pb-5">
+  <!-- signup -->
 
-      
+  <div class="container pt-5 pb-5">
+    <form action="./welcome.html" class="row g-3" onsubmit="return signupvalidation()">
+      <div class="col-md-6">
+        <label for="firstName" class="form-label">First Name</label>
+        <input type="name" class="form-control" id="signup_firstName">
+      </div>
+      <div class="col-md-6">
+        <label for="lastName" class="form-label">Last Name</label>
+        <input type="name" class="form-control" id="signup_lastName">
+      </div>
+      <div class="col-md-6">
+        <label for="inputEmail4" class="form-label">Email</label>
+        <input type="email" class="form-control" id="signup_inputEmail4">
+      </div>
+      <div class="col-md-6">
+        <label for="mobile4" class="form-label">mobile</label>
+        <input type="number" class="form-control" id="signup_mobile4">
+      </div>
+      <div class="col-12">
+        <label for="inputPassword4" class="form-label">Password</label>
+        <input type="password" class="form-control" id="signup_inputPassword4">
+      </div>
+      <div class="col-12">
+        <label for="inputPassword4" class="form-label">Confirm Password</label>
+        <input type="password" class="form-control" id="signup_confirminputPassword4" >
+      </div>
+      <div class="col-12">
+        <label for="inputAddress" class="form-label">Address</label>
+        <input type="text" class="form-control" id="signup_inputAddress" placeholder="1234 Main St">
+      </div>
+      <div class="col-12">
+        <label for="inputAddress2" class="form-label">Address 2</label>
+        <input type="text" class="form-control" id="signup_inputAddress2" placeholder="Apartment, studio, or floor">
+      </div>
+      <div class="col-md-6">
+        <label for="inputCity" class="form-label">City</label>
+        <input type="text" class="form-control" id="signup_inputCity">
+      </div>
+      <div class="col-md-4">
+        <label for="inputState" class="form-label">State</label>
+        <select id="signup_inputState" class="form-select">
+          <option selected>Choose...</option>
+          <option>...</option>
+        </select>
+      </div>
+      <div class="col-md-2">
+        <label for="inputZip" class="form-label">Zip</label>
+        <input type="text" class="form-control" id="signup_inputZip">
+      </div>
+      <div class="col-12">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="signup_gridCheck">
+          <label class="form-check-label" for="gridCheck">
+            Check me out
+          </label>
+        </div>
+      </div>
+      <div class="col-12">
+        <button type="submit" class="btn btn-primary">Sign in</button>
+      </div>
+    </form>
+    <label class="error " for="error_message" id="error_message"></label>
+  </div>
 
-              <form class="row g-3" onsubmit="return signupvalidation()">
-
-                <div class="col-md-6">
-                  <label for="firstName" class="form-label">First Name</label>
-                  <input type="name" class="form-control" id="signup_firstName">
-                </div>
-                <div class="col-md-6">
-                  <label for="lastName" class="form-label">Last Name</label>
-                  <input type="name" class="form-control" id="signup_lastName">
-                </div>
-
-                <div class="col-md-6">
-                  <label for="inputEmail4" class="form-label">Email</label>
-                  <input type="email" class="form-control" id="signup_inputEmail4">
-                </div>
-
-                <div class="col-md-6">
-                  <label for="mobile4" class="form-label">mobile</label>
-                  <input type="number" class="form-control" id="signup_mobile4">
-                </div>
-                <div class="col-12">
-                  <label for="inputPassword4" class="form-label">Password</label>
-                  <input type="password" class="form-control" id="signup_inputPassword4">
-                </div>
-                <div class="col-12">
-                  <label for="inputPassword4" class="form-label">Confirm Password</label>
-                  <input type="password" class="form-control" id="signup_confirminputPassword4" >
-                </div>
-                <div class="col-12">
-                  <label for="inputAddress" class="form-label">Address</label>
-                  <input type="text" class="form-control" id="signup_inputAddress" placeholder="1234 Main St">
-                </div>
-                <div class="col-12">
-                  <label for="inputAddress2" class="form-label">Address 2</label>
-                  <input type="text" class="form-control" id="signup_inputAddress2" placeholder="Apartment, studio, or floor">
-                </div>
-                <div class="col-md-6">
-                  <label for="inputCity" class="form-label">City</label>
-                  <input type="text" class="form-control" id="signup_inputCity">
-                </div>
-                <div class="col-md-4">
-                  <label for="inputState" class="form-label">State</label>
-                  <select id="signup_inputState" class="form-select">
-                    <option selected>Choose...</option>
-                    <option>...</option>
-                  </select>
-                </div>
-                <div class="col-md-2">
-                  <label for="inputZip" class="form-label">Zip</label>
-                  <input type="text" class="form-control" id="signup_inputZip">
-                </div>
-                <div class="col-12">
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="signup_gridCheck">
-                    <label class="form-check-label" for="gridCheck">
-                      Check me out
-                    </label>
-                  </div>
-                </div>
-                <div class="col-12">
-                  <button type="submit" class="btn btn-primary">Sign in</button>
-                </div>
-              </form>
-
-            </div>
-        <!-- end of signup -->
+  <!-- end of signup -->
 
 <!-- footer -->
 

@@ -25,7 +25,7 @@ function loginvalidation(){
 // start signup validation
 
 function signupvalidation(){
-    if(loginemail.value =="" || loginpwd.value ==""){
+    if(signup_firstName.value =="" || signup_lastName.value =="" || signup_inputEmail4.value ==""){
         error_message.innerText = "field cannot be empty";
         return false;
     }
