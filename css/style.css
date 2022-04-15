@@ -7,6 +7,10 @@
    float: left;
    margin-top: 3%;
 }
+.error{
+    color: red;
+    margin-left: 30%;
+}
 footer{
     background-color: #494d4b;
     text-align: center;
