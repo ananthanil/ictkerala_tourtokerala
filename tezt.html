@@ -1,13 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<select id="ddlView">
+<option value="0">Select</option>
+<option value="1">test1</option>
+<option value="2">test2</option>
+<option value="3">test3</option>
+</select>  
+<input type="button" onclick="Validate()" value="select" >
 
-                   
-  
+<script>
+function Validate()
+{
+var e = document.getElementById("ddlView");
+var strUser = e.options[e.selectedIndex].value;
+console.log(strUser);
 
-s`
 
-    <!-- footer -->
 
-<footer>
-<p class="foot-p">Copyright@2021</p>
-</footer>
+if(strUser==0)
+{
+alert("Please select a user");
+}
+}
+</script>
+</td></head>
 
-<!-- /footer -->
+</html>
