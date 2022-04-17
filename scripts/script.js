@@ -33,7 +33,6 @@ function loginvalidation(){
 
 function signupvalidation(){
     var state = signup_inputState.options[signup_inputState.selectedIndex].value;
-    console.log(state);
     if(signup_firstName.value =="" || signup_lastName.value =="" || signup_inputEmail4.value =="" || signup_inputPassword4.value =="" || signup_confirminputPassword4.value == "" || signup_inputAddress.value == "" || signup_inputAddress2.value == "" || signup_inputCity.value == "" || signup_mobile4.value == "" || signup_inputZip.value == "" || signup_gridCheck.checked == "" || state==0){
         error_message.innerText = "field cannot be empty";
         return false;
