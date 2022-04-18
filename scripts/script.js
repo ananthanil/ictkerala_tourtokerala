@@ -34,13 +34,20 @@ function signupvalidation(){
         error_message.innerText = "field cannot be empty";
         return false;
     }
-    var mobile = /^\d{10}$/;
-    if(signup_mobile4.value == mobile){
-        return true;
+    
+    else if(signup_mobile4.value != ""){
+        var mobile =/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;         
+        if(signup_mobile4.value.match(mobile)){
+            return true;
+            }
+        else{
+            error_message.innerText = "required 10 digit mobile only";
+            return false;
+            }
         }
+    
     else{
-        error_message.innerText = "required 10 digit mobile";
-        return false;   
+        return true;
     }
 }
 
