@@ -13,9 +13,6 @@ var signup_inputCity = document.getElementById("signup_inputCity");
 var signup_inputZip = document.getElementById("signup_inputZip");
 var signup_gridCheck = document.getElementById("signup_gridCheck");
 var signup_inputState = document.getElementById("signup_inputState");
-//var state = signup_inputState.options[signup_inputState.selectedIndex].value;
-// var strUser1 = signup_inputState.options[signup_inputState.selectedIndex].text;
-//console.log(state);
 
 
 // start login validation
@@ -36,6 +33,14 @@ function signupvalidation(){
     if(signup_firstName.value =="" || signup_lastName.value =="" || signup_inputEmail4.value =="" || signup_inputPassword4.value =="" || signup_confirminputPassword4.value == "" || signup_inputAddress.value == "" || signup_inputAddress2.value == "" || signup_inputCity.value == "" || signup_mobile4.value == "" || signup_inputZip.value == "" || signup_gridCheck.checked == "" || state==0){
         error_message.innerText = "field cannot be empty";
         return false;
+    }
+    var mobile = /^\d{10}$/;
+    if(signup_mobile4.value == mobile){
+        return true;
+        }
+    else{
+        error_message.innerText = "required 10 digit mobile";
+        return false;   
     }
 }
 
