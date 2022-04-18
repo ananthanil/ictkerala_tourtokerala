@@ -22,6 +22,19 @@ function loginvalidation(){
         error_message.innerText = "field cannot be empty";
         return false;
     }
+    else if(loginemail.value != ""){
+        let regexp = /^([A-Za-z0-9\.-]+)@([A-Za-z\-]+).([a-z]{2,3})(.[a-z]{2,3})?$/;
+        if(regexp.test(loginemail.value)){
+            return true;
+        }
+        else{
+            error_message.innerText = "required proper email address formate";
+            return false;   
+        }
+    }
+    else{
+        return true;
+    }
 }
 
 // end of login validation
@@ -33,6 +46,17 @@ function signupvalidation(){
     if(signup_firstName.value =="" || signup_lastName.value =="" || signup_inputEmail4.value =="" || signup_inputPassword4.value =="" || signup_confirminputPassword4.value == "" || signup_inputAddress.value == "" || signup_inputAddress2.value == "" || signup_inputCity.value == "" || signup_mobile4.value == "" || signup_inputZip.value == "" || signup_gridCheck.checked == "" || state==0){
         error_message.innerText = "field cannot be empty";
         return false;
+    }
+
+    else if(signup_inputEmail4.value != ""){
+        let regexp = /^([A-Za-z0-9\.-]+)@([A-Za-z\-]+).([a-z]{2,3})(.[a-z]{2,3})?$/;
+        if(regexp.test(signup_inputEmail4.value)){
+            return true;
+        }
+        else{
+            error_message.innerText = "required email address formate";
+            return false;   
+        }
     }
     
     else if(signup_mobile4.value != ""){
