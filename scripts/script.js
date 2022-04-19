@@ -56,16 +56,16 @@ function signupvalidation(){
   if(signup_firstName.value =="" || signup_lastName.value =="" || signup_inputEmail4.value =="" || signup_inputPassword4.value =="" || signup_confirminputPassword4.value == "" || signup_inputAddress.value == "" || signup_inputAddress2.value == "" || signup_inputCity.value == "" || signup_mobile4.value == "" || signup_inputZip.value == "" || signup_gridCheck.checked == "" || state==0){
       error_message.innerText = "field cannot be empty";
       return false;
-  }
+    }
     
   if(!regexp.test(signup_inputEmail4.value)){
-    email_message.innerText = "invalid emaill address";   
-    return false; 
-  }
+        email_message.innerText = "invalid emaill address";   
+        return false; 
+    }
 
   if(!signup_mobile4.value.match(mobile)){
-    mobile_message.innerText = "invalid mobile number";
-    return false;
+        mobile_message.innerText = "invalid mobile number";
+        return false;
     }
 
     if(!regpass.test(signup_inputPassword4.value)){
@@ -78,9 +78,9 @@ function signupvalidation(){
         return false;
     }
 
-  if(!zipexp.test(signup_inputZip.value)){
-    zip_message.innerText = "required 6 digit code";
-      return false;
-  }       
+    if(!zipexp.test(signup_inputZip.value)){
+        zip_message.innerText = "required 6 digit code";
+        return false;
+    }       
 }
 // end of sign up validation
