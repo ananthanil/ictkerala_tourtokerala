@@ -47,32 +47,64 @@ function signupvalidation(){
         error_message.innerText = "field cannot be empty";
         return false;
     }
-
-    else if(signup_inputEmail4.value != ""){
-        let regexp = /^([A-Za-z0-9\.-]+)@([A-Za-z\-]+).([a-z]{2,3})(.[a-z]{2,3})?$/;
-        if(regexp.test(signup_inputEmail4.value)){
-            return true;
-        }
-        else{
-            error_message.innerText = "required email address formate";
-            return false;   
-        }
+}
+function emaivalidation(){
+    var regexp = /^([A-Za-z0-9\.-]+)@([A-Za-z\-]+).([a-z]{2,3})(.[a-z]{2,3})?$/;
+    alert("in esle if email");     
+    if(regexp.test(signup_inputEmail4.value)){
+        alert("pass");   
+        return true;  
     }
-    
-    else if(signup_mobile4.value != ""){
-        var mobile =/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;         
-        if(signup_mobile4.value.match(mobile)){
-            return true;
-            }
-        else{
-            error_message.innerText = "required 10 digit mobile only";
-            return false;
-            }
-        }
-    
     else{
-        return true;
+        error_message.innerText = "required email address formate";
+        alert("faild");   
+        return false;   
     }
 }
+
+
+    // else{
+    //      if(signup_inputEmail4.value != ""){
+    //         let regexp = /^([A-Za-z0-9\.-]+)@([A-Za-z\-]+).([a-z]{2,3})(.[a-z]{2,3})?$/;
+    //         alert("in esle if email");     
+    //         if(regexp.test(signup_inputEmail4.value)){
+    //             alert("pass");   
+    //             return true;  
+    //         }
+    //         else{
+    //             error_message.innerText = "required email address formate";
+    //             alert("faild");   
+    //             return false;   
+    //         }
+    //     }
+    //     else if(signup_inputZip.value != ""){
+    //         alert("in else if");
+    //         var zipexp = /^([0-9]{6})$/;
+    //         if(zipexp.test(signup_inputZip.value)){
+    //             alert("pass");
+    //             return true;
+    //         }
+    //         else{
+    //             error_message.innerText = "required 6 digit code";
+    //             alert("faild");
+    //             return false;
+    //         }
+    //     }
+    //     else if(signup_mobile4.value != ""){
+    //         var mobile =/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;    
+    //         alert("in esle if mobile");     
+    //         if(signup_mobile4.value.match(mobile)){
+    //             alert("pass");
+    //             return true;
+    //             }
+    //         else{
+    //             error_message.innerText = "required 10 digit mobile only";
+    //             alert("faild");
+    //             return false;
+    //             }
+    //         }
+    //     }
+          
+
 
 // start signup validation
