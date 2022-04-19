@@ -58,12 +58,12 @@ function signupvalidation(){
   }
     
   if(!regexp.test(signup_inputEmail4.value)){
-    error_message.innerText = "required email address formate";   
+    email_message.innerText = "required email address formate";   
     return false; 
   }
 
   if(!signup_mobile4.value.match(mobile)){
-    error_message.innerText = "required 10 digit mobile only";
+    email_mobile.innerText = "required 10 digit mobile only";
     return false;
     }
 
