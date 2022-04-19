@@ -13,11 +13,13 @@ var signup_inputCity = document.getElementById("signup_inputCity");
 var signup_inputZip = document.getElementById("signup_inputZip");
 var signup_gridCheck = document.getElementById("signup_gridCheck");
 var signup_inputState = document.getElementById("signup_inputState");
+var mobile =/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;   
+var regexp = /^([A-Za-z0-9\.-]+)@([A-Za-z\-]+).([a-z]{2,3})(.[a-z]{2,3})?$/; 
+var zipexp = /^([0-9]{6})$/;
+var regpass = /^(?=.*[A-Za-z])(?=.*\d)[A-za-z0-9]{8,}$/;
 
 function signupvalidation(){
-  var mobile =/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;   
-  var regexp = /^([A-Za-z0-9\.-]+)@([A-Za-z\-]+).([a-z]{2,3})(.[a-z]{2,3})?$/; 
-  var zipexp = /^([0-9]{6})$/;
+    
   var state = signup_inputState.options[signup_inputState.selectedIndex].value;
 
   if(signup_firstName.value =="" || signup_lastName.value =="" || signup_inputEmail4.value =="" || signup_inputPassword4.value =="" || signup_confirminputPassword4.value == "" || signup_inputAddress.value == "" || signup_inputAddress2.value == "" || signup_inputCity.value == "" || signup_mobile4.value == "" || signup_inputZip.value == "" || signup_gridCheck.checked == "" || state==0){
@@ -33,6 +35,16 @@ function signupvalidation(){
   if(!signup_mobile4.value.match(mobile)){
     error_message.innerText = "required 10 digit mobile only";
     return false;
+    }
+
+    if(!regpass.test(signup_inputPassword4.value)){
+        error_message.innerText = "Password doesnot meet";
+        return false;
+    }
+
+    if(signup_inputPassword4.value != signup_confirminputPassword4.value){
+        error_message.innerText = "Password is not matching";
+        return false;
     }
 
   if(!zipexp.test(signup_inputZip.value)){
