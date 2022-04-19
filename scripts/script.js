@@ -14,6 +14,8 @@ var signup_inputZip = document.getElementById("signup_inputZip");
 var signup_gridCheck = document.getElementById("signup_gridCheck");
 var signup_inputState = document.getElementById("signup_inputState");
 
+
+
 // starting of regular express
 
 var mobile =/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;   
@@ -49,7 +51,6 @@ function loginvalidation(){
 // starting of sign up validation
 
 function signupvalidation(){
-
   var state = signup_inputState.options[signup_inputState.selectedIndex].value;
 
   if(signup_firstName.value =="" || signup_lastName.value =="" || signup_inputEmail4.value =="" || signup_inputPassword4.value =="" || signup_confirminputPassword4.value == "" || signup_inputAddress.value == "" || signup_inputAddress2.value == "" || signup_inputCity.value == "" || signup_mobile4.value == "" || signup_inputZip.value == "" || signup_gridCheck.checked == "" || state==0){
@@ -58,27 +59,27 @@ function signupvalidation(){
   }
     
   if(!regexp.test(signup_inputEmail4.value)){
-    email_message.innerText = "required email address formate";   
+    email_message.innerText = "invalid emaill address";   
     return false; 
   }
 
   if(!signup_mobile4.value.match(mobile)){
-    email_mobile.innerText = "required 10 digit mobile only";
+    mobile_message.innerText = "invalid mobile number";
     return false;
     }
 
     if(!regpass.test(signup_inputPassword4.value)){
-        error_message.innerText = "Password doesnot meet";
+        password_message.innerText = "Password doesnot meet";
         return false;
     }
 
     if(signup_inputPassword4.value != signup_confirminputPassword4.value){
-        error_message.innerText = "Password is not matching";
+        confirm_password_message.innerText = "Password is not matching";
         return false;
     }
 
   if(!zipexp.test(signup_inputZip.value)){
-    error_message.innerText = "required 6 digit code";
+    zip_message.innerText = "required 6 digit code";
       return false;
   }       
 }
