@@ -54,7 +54,18 @@ function signupvalidation(){
   var state = signup_inputState.options[signup_inputState.selectedIndex].value;
 
   if(signup_firstName.value =="" || signup_lastName.value =="" || signup_inputEmail4.value =="" || signup_inputPassword4.value =="" || signup_confirminputPassword4.value == "" || signup_inputAddress.value == "" || signup_inputAddress2.value == "" || signup_inputCity.value == "" || signup_mobile4.value == "" || signup_inputZip.value == "" || signup_gridCheck.checked == "" || state==0){
-      error_message.innerText = "field cannot be empty";
+      firstname_message.innerText = "field cannot be empty"; 
+      lastname_message.innerText = "field cannot be empty"; 
+      email_message.innerText = "field cannot be empty";
+      mobile_message.innerText = "field cannot be empty";
+      password_message.innerText = "field cannot be empty";
+      confirm_password_message.innerText = "field cannot be empty";
+      zip_message.innerText = "field cannot be empty";
+      address_message.innerText = "field cannot be empty";
+      address2_message.innerText = "field cannot be empty";
+      city_message.innerText = "field cannot be empty";
+      state_message.innerText = "field cannot be empty";
+      I_message.innerText = "field cannot be empty";
       return false;
     }
     
@@ -79,7 +90,7 @@ function signupvalidation(){
     }
 
     if(!zipexp.test(signup_inputZip.value)){
-        zip_message.innerText = "required 6 digit code";
+        zip_message.innerText = "Invalid zip code";
         return false;
     }       
 }
