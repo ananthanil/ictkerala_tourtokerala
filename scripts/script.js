@@ -94,4 +94,18 @@ function signupvalidation(){
         return false;
     }       
 }
+signup_inputPassword4.addEventListener('input',( ) => {
+    if(signup_inputPassword4.value.length <= 7 ){
+        password_message.innerText = "poor";
+        password_message.style.color = "red";
+    }
+    else if(signup_inputPassword4.value.length >= 8 && signup_inputPassword4.value.length <9 ){
+        password_message.innerText = "medium";
+        password_message.style.color = "orange";
+    }
+    else{
+        password_message.innerText = "strong";
+        password_message.style.color = "green";
+    }
+})
 // end of sign up validation
