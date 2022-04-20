@@ -94,7 +94,7 @@ function signupvalidation(){
         return false;
     }       
 }
-// password 
+// starting of password range
 
 signup_inputPassword4.addEventListener('input',( ) => {
     if(signup_inputPassword4.value.length <= 7 ){
@@ -110,8 +110,9 @@ signup_inputPassword4.addEventListener('input',( ) => {
         password_message.style.color = "green";
     }
 })
+// end of password range
 
-// confirm password 
+// starting of confirm password range
 
 signup_confirminputPassword4.addEventListener('input',( ) => {
     if(signup_confirminputPassword4.value.length <= 7 ){
@@ -127,4 +128,6 @@ signup_confirminputPassword4.addEventListener('input',( ) => {
         confirm_password_message.style.color = "green";
     }
 })
+
+// end of confirm password range
 // end of sign up validation
