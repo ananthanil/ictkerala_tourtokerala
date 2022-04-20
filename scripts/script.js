@@ -94,6 +94,8 @@ function signupvalidation(){
         return false;
     }       
 }
+// password 
+
 signup_inputPassword4.addEventListener('input',( ) => {
     if(signup_inputPassword4.value.length <= 7 ){
         password_message.innerText = "poor";
@@ -106,6 +108,23 @@ signup_inputPassword4.addEventListener('input',( ) => {
     else{
         password_message.innerText = "strong";
         password_message.style.color = "green";
+    }
+})
+
+// confirm password 
+
+signup_confirminputPassword4.addEventListener('input',( ) => {
+    if(signup_confirminputPassword4.value.length <= 7 ){
+        confirm_password_message.innerText = "poor";
+        confirm_password_message.style.color = "red";
+    }
+    else if(signup_confirminputPassword4.value.length >= 8 && signup_confirminputPassword4.value.length < 9 ){
+        confirm_password_message.innerText = "medium";
+        confirm_password_message.style.color = "orange";
+    }
+    else{
+        confirm_password_message.innerText = "strong";
+        confirm_password_message.style.color = "green";
     }
 })
 // end of sign up validation
