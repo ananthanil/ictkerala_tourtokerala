@@ -81,11 +81,13 @@ function signupvalidation(){
 
     if(!regpass.test(signup_inputPassword4.value)){
         password_message.innerText = "Password doesnot meet";
+        password_message.style.color = "red";
         return false;
     }
 
     if(signup_inputPassword4.value != signup_confirminputPassword4.value){
         confirm_password_message.innerText = "Password is not matching";
+        confirm_password_message.style.color = "red";
         return false;
     }
 
